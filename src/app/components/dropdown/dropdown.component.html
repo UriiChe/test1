@@ -1,0 +1,27 @@
+<div class="card col-4">
+  <form #form="ngForm" (ngSubmit) = logIn()>
+    <div class="form-group">
+      <label for="userEmail">Email address</label>
+      <input type="email" 
+            id="userEmail" 
+            name="userEmail" 
+            class="form-control"  
+            placeholder="email@example.com"
+            [(ngModel)] = "user.email"
+            #email = "ngModel" required>
+    </div>
+    <div class="form-group">
+      <label for="userPassword">Password</label>
+      <input type="password" 
+              id="userPassword" 
+              name="userPassword"
+              class="form-control"  
+              placeholder="Password"
+              [(ngModel)] = "user.password"
+              #password = "ngModel" required>
+    </div>
+    <button [disabled]="email.invalid || password.invalid" 
+            type="submit"  
+            class="btn btn-primary">Sign in</button>
+  </form>
+</div>

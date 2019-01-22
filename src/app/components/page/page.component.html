@@ -1,0 +1,13 @@
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" routerLink = "/dropdown">LogIn</a>
+  </li>
+</ul>
+<div class="card" style="width: 18rem;" *ngIf = "user.email">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">User email: {{ user.email }}</li>
+    <li class="list-group-item">User password: {{ user.password }}</li>
+    <li class="list-group-item">User ID: {{ user.id }}</li>
+  </ul>
+</div>
+
